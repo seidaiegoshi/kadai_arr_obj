@@ -16,7 +16,14 @@
     position: relative;
 }
 
-#copyToClipboard {
+#copyTextToClipboard {
+    /* visibility: hidden; */
+    position: absolute;
+    top: 0.5rem;
+    right: 1.2rem;
+}
+
+#copyCodeToClipboard {
     /* visibility: hidden; */
     position: absolute;
     top: 0.5rem;

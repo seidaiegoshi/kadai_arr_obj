@@ -7,21 +7,20 @@ let qIndex; //選択されたオブジェクト配列の配列番号を保持
 // ---------------------------
 
 //クリップボードにコピーしたよを知らせる
-const iconClipboardVisible = () => {
-    $("#iconClipboard").removeClass("bi-clipboard");
-    $("#iconClipboard").addClass("bi-clipboard-check");
-    $("#iconClipboard").addClass("text-success");
-    $("#copied").css("visibility", "visible");
+const iconClipboardVisible = (id) => {
+    $(id).removeClass("bi-clipboard");
+    $(id).addClass("bi-clipboard-check");
+    $(id).addClass("text-success");
+    console.log(id);
 };
 
 //クリップボードにコピーしてない状態にする。
-const iconClipboardHidden = () => {
-    if ($("#iconClipboard").hasClass("bi-clipboard-check")) {
-        $("#iconClipboard").addClass("bi-clipboard");
-        $("#iconClipboard").removeClass("bi-clipboard-check");
-        $("#iconClipboard").removeClass("text-success");
+const iconClipboardHidden = (id) => {
+    if ($(id).hasClass("bi-clipboard-check")) {
+        $(id).addClass("bi-clipboard");
+        $(id).removeClass("bi-clipboard-check");
+        $(id).removeClass("text-success");
     };
-    $("#copied").css("visibility", "hidden");
 };
 
 
@@ -56,36 +55,49 @@ $("#templateSelector").change(() => {
         $("#outputArea").css("visibility", "hidden");
         $("#buttonOutput").css("visibility", "hidden");
     }
-    iconClipboardHidden();
+    iconClipboardHidden("#iconTextClipboard");
 });
 
 // 出力ボタンをおしたら
 // 入力した内容をまとめたテキストを表示。
 $("#buttonOutput").on("click", () => {
     let outputText = "";
+    let outputCode = "";
+    $("#outputText").css("visibility", "hidden");
+    $(".codeArea").css("visibility", "hidden");
+
     questions[qIndex].questionContents.forEach((item, index) => {
-        outputText += "【" + item.question + "】";
-        outputText += "\n";
         if (item.answerType == "code") {
-            outputText += "```\n";
-            outputText += $("#q" + index).val();
-            outputText += "```";
+            outputCode += $("#q" + index).val();
+            $(".codeArea").css("visibility", "visible");
         } else {
+            outputText += "【" + item.question + "】";
+            outputText += "\n";
             outputText += $("#q" + index).val();
+            $("#outputText").css("visibility", "visible");
         }
         outputText += "\n";
     });
-    $("#outputText").val(outputText);
-    $("#outputArea").css("visibility", "visible");
 
-    iconClipboardHidden();
+    $("#outputText").val(outputText);
+    $("#outputCode").val(outputCode);
+
+    iconClipboardHidden("#iconTextClipboard");
 });
 
 
-//コピーアイコンを押したら、
+//テキストのコピーアイコンを押したら、
 //クリップボードにコピーしたことを知らせる。
-$("#copyToClipboard").on("click", () => {
-    iconClipboardVisible();
+$("#copyTextToClipboard").on("click", () => {
+    iconClipboardVisible("#iconTextClipboard");
     let copyText = $("#outputText").val();
+    navigator.clipboard.writeText(copyText);
+});
+
+//コードのコピーアイコンを押したら、
+//クリップボードにコピーしたことを知らせる。
+$("#copyCodeToClipboard").on("click", () => {
+    iconClipboardVisible("#iconCodeClipboard");
+    let copyText = $("#outputCode").val();
     navigator.clipboard.writeText(copyText);
 });
