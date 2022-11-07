@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.tweet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.motto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.motto button {
+  border: 3px solid rgb(70, 194, 3);
+  border-bottom: 4px solid rgb(29, 87, 1);
+  border-left: 4px solid rgb(29, 87, 1);
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: rgb(25, 114, 0);
+  color: white;
+  font-size: 15px;
+  z-index: 100;
+}
+
+.run {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  /* background-color: darkseagreen; */
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: darkseagreen;
+}
+
+.poketsound {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color: white;
+  text-decoration: none;
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+
+#canvas {
+  /* background: #555; */
+  display: block;
+  margin: 0px auto;
+  z-index: 1;
+}

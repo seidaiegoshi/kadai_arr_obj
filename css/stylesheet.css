@@ -33,3 +33,10 @@
 .codeArea {
     visibility: hidden;
 }
+
+#sisi img {
+    width: 50px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
