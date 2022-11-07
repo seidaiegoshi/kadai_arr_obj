@@ -43,8 +43,10 @@ $("#formSelector").change(() => {
 
   $(".formContent").html(list);
 
-  $(".recordMessage").css("visibility", "hidden");
-  $(".addArea").css("visibility", "visible");
+  $(".recordMessage").css("display", "none");
+  $(".addArea").css("display", "flex");
+  $(".deleteMessage").css("display", "none");
+
 
 });
 
@@ -65,5 +67,20 @@ $("#recordButton").on("click", () => {
 
   setLocalStorage("myForm", JSON.stringify(data));
 
-  $(".recordMessage").css("visibility", "visible");
+  $(".recordMessage").css("display", "block");
+
+})
+
+
+//削除ボタンを押したら
+$("#deleteAll").on("click", () => {
+  $(".addArea").css("display", "none");
+
+  $(".deleteMessage").css("display", "block");
+})
+$("#deleteStorage").on("click", () => {
+  localStorage.removeItem("myForm");
+})
+$("#cancel").on("click", () => {
+  $(".deleteMessage").css("display", "none");
 })

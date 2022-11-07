@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  visibility: hidden;
+  display: none;
 }
 
 .title {
@@ -36,5 +36,9 @@
 
 
 .recordMessage {
-  visibility: hidden;
+  display: none;
+}
+
+.deleteMessage {
+  display: none;
 }
