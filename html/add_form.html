@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>投稿補助:フォームを追加する</title>
+  <!--  bootstrap  -->
+  <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./../css/add_form.css">
+
+</head>
+
+<body>
+  <header class="py-5 text-center">
+    <h1>
+      投稿フォームを作成
+    </h1>
+    <p class="lead">
+      質問のテンプレートをローカルストレージに登録します。
+    </p>
+  </header>
+
+  <div class="input-group mb-3 container">
+    <label class="input-group-text" for="formSelector">どれ編集する？</label>
+    <select class="form-select" id="formSelector" name="formSelector">
+      <option selected id="chooseOpt">Choose...</option>
+    </select>
+    <button class="btn btn-danger">登録したデータを削除する。</button>
+  </div>
+
+  <div class=" addArea">
+    <div class="title form-floating mb-3">
+      <input type="text" id="questionTitle" class="form-control">
+      <label for="questionTitle">質問セットのタイトル</label>
+    </div>
+
+    <div class="row container">
+      <div class="col">形式</div>
+      <div class="col">質問</div>
+      <div class="col">プレースホルダー</div>
+    </div>
+
+    <div class="formContent container"></div>
+
+    <div class="record">
+      <button id="recordButton" class="btn btn-primary">登録</button>
+      <button onclick="location.href='./../index.html'" id="recordButton" class="btn btn-outline-primary">キャンセル</button>
+      <p class="recordMessage">登録した！キャンセルで戻る。</p>
+    </div>
+
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./../js/default_question.js"></script>
+  <script src="./../js/localstorage.js"></script>
+  <script src="./../js/add_form_script.js"></script>
+
+</body>
+
+</html>

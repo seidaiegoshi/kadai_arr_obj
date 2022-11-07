@@ -1,0 +1,40 @@
+.addArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.title {
+  width: 50%;
+}
+
+.thread {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.thread>div {
+  width: 20%;
+}
+
+.formContent {
+  width: 100%;
+  /* display: flex;
+  justify-content: space-evenly;
+  align-items: center; */
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.recordMessage {
+  visibility: hidden;
+}

@@ -30,10 +30,12 @@
     </select>
 
     <div class="m-1">
-      <button type="button" id="addForm" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-        title="フォームを追加する">
-        <i class="bi bi-file-earmark-post" style="font-size: 1rem; color: white;"></i>
-      </button>
+      <a href="./html/add_form.html">
+        <button type="button" id="addForm" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+          title="フォームを編集する">
+          <i class="bi bi-file-earmark-post" style="font-size: 1rem; color: white;"></i>
+        </button>
+      </a>
     </div>
 
   </div>
@@ -56,26 +58,26 @@
     </div>
 
     <!-- コード -->
-    <div class="codeArea container mb-3">
-      <div class="outputText">
+    <div class="codeArea">
+      <div class="outputCode container mb-3">
         <textarea class='form-control' rows='5' id="outputCode"> </textarea>
         <div id="copyCodeToClipboard" data-bs-toggle="tooltip" data-bs-placement="top" title="コピー">
           <i class="bi bi-clipboard" id="iconCodeClipboard"></i>
         </div>
       </div>
       <!-- アコーディオン -->
-      <div class="accordion">
+      <div class="accordion  container mb-5">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               slackにコードを綺麗に貼り付ける
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-              <kbd>⌘</kbd>+<kbd>シフト⇧</kbd>+<kbd>ENTER↩</kbd>
+              <kbd>⌘</kbd>+<kbd>シフト⇧</kbd>+<kbd>ENTER↩</kbd>を押すと、スニペットが表示されるので、コード欄にコードを貼り付ける！
             </div>
           </div>
         </div>
@@ -100,6 +102,7 @@
   </script>
   <!-- 自前 -->
   <script src="./js/default_question.js"></script>
+  <script src="./js/localstorage.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

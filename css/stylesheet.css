@@ -1,11 +1,6 @@
 #buttonOutput {
-    /* visibility: hidden; */
+    visibility: hidden;
 }
-
-#outputArea {
-    /* visibility: hidden; */
-}
-
 
 #copied {
     color: rgb(17, 206, 0);
@@ -14,18 +9,27 @@
 .outputText {
     display: block;
     position: relative;
+    visibility: hidden;
 }
 
 #copyTextToClipboard {
-    /* visibility: hidden; */
     position: absolute;
     top: 0.5rem;
     right: 1.2rem;
 }
 
+
+.outputCode {
+    display: block;
+    position: relative;
+}
+
 #copyCodeToClipboard {
-    /* visibility: hidden; */
     position: absolute;
     top: 0.5rem;
     right: 1.2rem;
+}
+
+.codeArea {
+    visibility: hidden;
 }
