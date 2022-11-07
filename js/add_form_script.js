@@ -77,9 +77,11 @@ $("#deleteAll").on("click", () => {
   $(".addArea").css("display", "none");
 
   $(".deleteMessage").css("display", "block");
+  $(".deletedMessage").css("display", "none")
 })
 $("#deleteStorage").on("click", () => {
   localStorage.removeItem("myForm");
+  $(".deletedMessage").css("display", "block")
 })
 $("#cancel").on("click", () => {
   $(".deleteMessage").css("display", "none");

@@ -36,6 +36,7 @@ const iconClipboardUnCopy = (id) => {
 let data = questions;
 if (getLocalStorage("myForm")) {
     data = JSON.parse(getLocalStorage("myForm"));
+    console.log(data);
 }
 
 data.forEach((questionTemplate, index) => {

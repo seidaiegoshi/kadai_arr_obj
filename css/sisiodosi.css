@@ -5,10 +5,14 @@
 
 
 .tweet {
+
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
+
 
 .motto {
   display: flex;
@@ -27,6 +31,13 @@
   color: white;
   font-size: 15px;
   z-index: 100;
+}
+
+.motto button:active {
+  border: 3px solid rgb(29, 87, 1);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
 }
 
 .run {

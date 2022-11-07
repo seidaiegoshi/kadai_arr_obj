@@ -42,3 +42,7 @@
 .deleteMessage {
   display: none;
 }
+
+.deletedMessage {
+  display: none;
+}

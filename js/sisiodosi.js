@@ -66,6 +66,7 @@ $("#buttonMotto").on("click", () => {
     }, 100)
 
   } else {
+    $(".tweet").css("position", "inherit");
     if (sikaCounter === 8) {
       startAddSikaInterval();
     }
