@@ -23,7 +23,7 @@ $("#formSelector").change(() => {
     let answerType = "";
     let question = "";
     let placeholder = "";
-    answerType = "<select name='select" + i + "'>";
+    answerType = "<select class='form-select' name='select" + i + "'>";
     if (e.answerType == "text") {
       answerType += "<option selected value='text'>text</option>";
       answerType += "<option value='code'>code</option>";
@@ -32,13 +32,13 @@ $("#formSelector").change(() => {
       answerType += "<option selected value='code'>code</option>";
     }
     answerType += "</select>";
-    question = "<textarea id='question" + i + "'>" + e.question + "</textarea>";
-    placeholder = "<textarea id='placeholder" + i + "'>" + e.placeholder + "</textarea>";
+    question = "<textarea class='form-control' id='question" + i + "'>" + e.question + "</textarea>";
+    placeholder = "<textarea class='form-control' id='placeholder" + i + "'>" + e.placeholder + "</textarea>";
 
     content += "<div class='col'>" + answerType + "</div>"
     content += "<div class='col'>" + question + "</div>"
     content += "<div class='col'>" + placeholder + "</div>"
-    list += "<div class='row'>" + content + "</div>"
+    list += "<hr><div class='row mb-3'>" + content + "</div>"
   });
 
   $(".formContent").html(list);

@@ -1,3 +1,14 @@
+.buttonReturn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+.buttonReturn i {
+  font-size: 2rem;
+  color: #333;
+}
+
 .addArea {
   display: flex;
   justify-content: center;
@@ -17,9 +28,6 @@
   align-items: center;
 }
 
-.thread>div {
-  width: 20%;
-}
 
 .formContent {
   width: 100%;

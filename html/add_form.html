@@ -21,9 +21,13 @@
     <p class="lead">
       質問のテンプレートをローカルストレージに登録します。
     </p>
+    <div class="buttonReturn">
+      <a href="./../index.html">
+        <i class="bi bi-arrow-left"></i></a>
+    </div>
   </header>
 
-  <div class=" mb-3 container"><button id="deleteAll" class="btn btn-danger">削除</button></div>
+  <div class=" mb-3 container"><button id="deleteAll" class="btn btn-danger">データの削除</button></div>
   <div class="input-group mb-3 container">
     <label class="input-group-text" for="formSelector">どれ編集する？</label>
     <select class="form-select" id="formSelector" name="formSelector">
@@ -39,15 +43,17 @@
       <label for="questionTitle">質問セットのタイトル</label>
     </div>
 
-    <div class="row container">
-      <div class="col">形式</div>
-      <div class="col">質問</div>
-      <div class="col">プレースホルダー</div>
+    <div class="container">
+      <div class="row align-items-start text-center">
+        <div class="col">形式</div>
+        <div class="col">質問</div>
+        <div class="col">プレースホルダー</div>
+      </div>
     </div>
 
     <div class="formContent container"></div>
 
-    <div class="record">
+    <div class="record container text-center mb-5">
       <button id="recordButton" class="btn btn-primary">登録</button>
       <button onclick="location.href='./../index.html'" id="recordButton" class="btn btn-outline-primary">キャンセル</button>
       <p class="recordMessage">登録した！キャンセルで戻る。</p>
