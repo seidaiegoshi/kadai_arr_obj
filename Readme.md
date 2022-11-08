@@ -13,16 +13,18 @@
 ## やりたいこと
 * 書いた内容をまとめて、テキスト形式で吐き出し、クリップボードにコピーボタンも追加
 * 質問内容について書くフォームを作成
-* slack のAPIを使って直接slackに投稿
+* slack のAPIを使って直接slackに投稿→わからんすぎたからあきらめ
 * 自分で作ったフォームをテンプレートとして使う事ができる。
 
 ## 技術
 * Bootstrap
 * localStorage
-* slack API
+* slack API→断念
 
 
 ## 悩んだところとか
+課題でなにするか悩んだ。
 
 
 ## github pages
+https://seidaiegoshi.github.io/kadai_arr_obj/
